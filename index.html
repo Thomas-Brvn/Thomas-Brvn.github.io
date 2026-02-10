@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Bourvon | Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">TB</a>
+            <ul class="nav-links">
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#experience">Parcours</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Changer de thème">
+                <span class="icon-sun">☀️</span>
+                <span class="icon-moon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-greeting">Bonjour, je suis</p>
+                <h1 class="hero-title">Thomas Bourvon</h1>
+                <h2 class="hero-subtitle">Data Analyst en alternance</h2>
+                <p class="hero-description">
+                    Étudiant en Big Data à Sup de Vinci et actuellement en alternance chez Arkéa Banque Privée.
+                    Passionné par l'analyse de données, le machine learning et la datavisualisation.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                    <a href="#contact" class="btn btn-secondary">Me contacter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Carousel -->
+    <section class="carousel-section">
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <img src="images/bluesky-logo.jpg" alt="Fake News Detection">
+                    <div class="carousel-caption">Détection de Fake News</div>
+                    <div class="carousel-overlay">
+                        <h4>Détection de Fake News</h4>
+                        <p>NLP et machine learning pour détecter les fake news sur les réseaux sociaux.</p>
+                        <div class="carousel-tags"><span>Python</span><span>NLP</span><span>ML</span></div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/sb29.jpg" alt="Football Dashboard">
+                    <div class="carousel-caption">Football Dashboard</div>
+                    <div class="carousel-overlay">
+                        <h4>Football Dashboard</h4>
+                        <p>Dashboard interactif pour analyser les performances des équipes de football.</p>
+                        <div class="carousel-tags"><span>Python</span><span>Power BI</span><span>Data Viz</span></div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/recommandation_musique.png" alt="Recommandation Musique">
+                    <div class="carousel-caption">Recommandation Musicale</div>
+                    <div class="carousel-overlay">
+                        <h4>Recommandation Musicale</h4>
+                        <p>Système de recommandation basé sur les préférences et caractéristiques audio.</p>
+                        <div class="carousel-tags"><span>Python</span><span>ML</span><span>Spotify API</span></div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/wimbledon.jpg" alt="Wimbledon Prediction">
+                    <div class="carousel-caption">Wimbledon Prediction</div>
+                    <div class="carousel-overlay">
+                        <h4>Wimbledon Prediction</h4>
+                        <p>Prédiction des résultats de tennis basée sur les statistiques des joueurs.</p>
+                        <div class="carousel-tags"><span>Python</span><span>ML</span><span>Pandas</span></div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/boursejpg.jpg" alt="Data Warehouse Finance">
+                    <div class="carousel-caption">Data Warehouse Finance</div>
+                    <div class="carousel-overlay">
+                        <h4>Data Warehouse Finance</h4>
+                        <p>Entrepôt de données pour centraliser données financières et actualités boursières.</p>
+                        <div class="carousel-tags"><span>Python</span><span>SQL</span><span>ETL</span></div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/llm.webp" alt="Création LLM">
+                    <div class="carousel-caption">Création d'un LLM</div>
+                    <div class="carousel-overlay">
+                        <h4>Création d'un LLM</h4>
+                        <p>Développement d'un Large Language Model from scratch avec architecture Transformer.</p>
+                        <div class="carousel-tags"><span>Python</span><span>PyTorch</span><span>Deep Learning</span></div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/computer-vision.jpg" alt="Computer Vision">
+                    <div class="carousel-caption">Computer Vision</div>
+                    <div class="carousel-overlay">
+                        <h4>Computer Vision</h4>
+                        <p>Détection et classification d'objets avec réseaux de neurones convolutifs.</p>
+                        <div class="carousel-tags"><span>Python</span><span>OpenCV</span><span>CNN</span></div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/n8n.png" alt="Agent IA">
+                    <div class="carousel-caption">Agent IA</div>
+                    <div class="carousel-overlay">
+                        <h4>Création d'un Agent IA</h4>
+                        <p>Agent intelligent autonome pour automatiser des tâches complexes.</p>
+                        <div class="carousel-tags"><span>Python</span><span>n8n</span><span>LLM</span></div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/iot.jpg.webp" alt="IoT Maintenance">
+                    <div class="carousel-caption">IoT Maintenance Prédictive</div>
+                    <div class="carousel-overlay">
+                        <h4>IoT Maintenance Prédictive</h4>
+                        <p>Prédiction de pannes sur données capteurs pour maintenance industrielle.</p>
+                        <div class="carousel-tags"><span>Python</span><span>Time Series</span><span>DL</span></div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/rag-amazon.jpg" alt="RAG Support Client">
+                    <div class="carousel-caption">RAG Support Client</div>
+                    <div class="carousel-overlay">
+                        <h4>RAG Support Client</h4>
+                        <p>Chatbot intelligent avec RAG pour répondre aux questions clients.</p>
+                        <div class="carousel-tags"><span>Python</span><span>LangChain</span><span>Vector DB</span></div>
+                    </div>
+                </div>
+                <!-- Duplicate slides for infinite loop -->
+                <div class="carousel-slide">
+                    <img src="images/bluesky-logo.jpg" alt="Fake News Detection">
+                    <div class="carousel-caption">Détection de Fake News</div>
+                    <div class="carousel-overlay">
+                        <h4>Détection de Fake News</h4>
+                        <p>NLP et machine learning pour détecter les fake news sur les réseaux sociaux.</p>
+                        <div class="carousel-tags"><span>Python</span><span>NLP</span><span>ML</span></div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/sb29.jpg" alt="Football Dashboard">
+                    <div class="carousel-caption">Football Dashboard</div>
+                    <div class="carousel-overlay">
+                        <h4>Football Dashboard</h4>
+                        <p>Dashboard interactif pour analyser les performances des équipes de football.</p>
+                        <div class="carousel-tags"><span>Python</span><span>Power BI</span><span>Data Viz</span></div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/recommandation_musique.png" alt="Recommandation Musique">
+                    <div class="carousel-caption">Recommandation Musicale</div>
+                    <div class="carousel-overlay">
+                        <h4>Recommandation Musicale</h4>
+                        <p>Système de recommandation basé sur les préférences et caractéristiques audio.</p>
+                        <div class="carousel-tags"><span>Python</span><span>ML</span><span>Spotify API</span></div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/wimbledon.jpg" alt="Wimbledon Prediction">
+                    <div class="carousel-caption">Wimbledon Prediction</div>
+                    <div class="carousel-overlay">
+                        <h4>Wimbledon Prediction</h4>
+                        <p>Prédiction des résultats de tennis basée sur les statistiques des joueurs.</p>
+                        <div class="carousel-tags"><span>Python</span><span>ML</span><span>Pandas</span></div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/boursejpg.jpg" alt="Data Warehouse Finance">
+                    <div class="carousel-caption">Data Warehouse Finance</div>
+                    <div class="carousel-overlay">
+                        <h4>Data Warehouse Finance</h4>
+                        <p>Entrepôt de données pour centraliser données financières et actualités boursières.</p>
+                        <div class="carousel-tags"><span>Python</span><span>SQL</span><span>ETL</span></div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/llm.webp" alt="Création LLM">
+                    <div class="carousel-caption">Création d'un LLM</div>
+                    <div class="carousel-overlay">
+                        <h4>Création d'un LLM</h4>
+                        <p>Développement d'un Large Language Model from scratch avec architecture Transformer.</p>
+                        <div class="carousel-tags"><span>Python</span><span>PyTorch</span><span>Deep Learning</span></div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/computer-vision.jpg" alt="Computer Vision">
+                    <div class="carousel-caption">Computer Vision</div>
+                    <div class="carousel-overlay">
+                        <h4>Computer Vision</h4>
+                        <p>Détection et classification d'objets avec réseaux de neurones convolutifs.</p>
+                        <div class="carousel-tags"><span>Python</span><span>OpenCV</span><span>CNN</span></div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/n8n.png" alt="Agent IA">
+                    <div class="carousel-caption">Agent IA</div>
+                    <div class="carousel-overlay">
+                        <h4>Création d'un Agent IA</h4>
+                        <p>Agent intelligent autonome pour automatiser des tâches complexes.</p>
+                        <div class="carousel-tags"><span>Python</span><span>n8n</span><span>LLM</span></div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/iot.jpg.webp" alt="IoT Maintenance">
+                    <div class="carousel-caption">IoT Maintenance Prédictive</div>
+                    <div class="carousel-overlay">
+                        <h4>IoT Maintenance Prédictive</h4>
+                        <p>Prédiction de pannes sur données capteurs pour maintenance industrielle.</p>
+                        <div class="carousel-tags"><span>Python</span><span>Time Series</span><span>DL</span></div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/rag-amazon.jpg" alt="RAG Support Client">
+                    <div class="carousel-caption">RAG Support Client</div>
+                    <div class="carousel-overlay">
+                        <h4>RAG Support Client</h4>
+                        <p>Chatbot intelligent avec RAG pour répondre aux questions clients.</p>
+                        <div class="carousel-tags"><span>Python</span><span>LangChain</span><span>Vector DB</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-nav">
+            <button class="carousel-btn carousel-prev" aria-label="Précédent">‹</button>
+            <button class="carousel-btn carousel-next" aria-label="Suivant">›</button>
+        </div>
+    </section>
+
+    <!-- Experience / Parcours Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-title">Mon Parcours</h2>
+
+            <!-- Expériences professionnelles -->
+            <h3 class="subsection-title">Expériences professionnelles</h3>
+            <div class="accordion-container">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <img src="images/logo-arkea.png" alt="Arkéa" class="accordion-logo">
+                        <div class="accordion-info">
+                            <span class="accordion-date">Sept. 2024 - Présent</span>
+                            <h4>Data Analyst</h4>
+                            <p class="accordion-company">Arkéa Banque Privée · Alternance</p>
+                        </div>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <ul class="accordion-list">
+                            <li>Mise en place d'une classification client pour le suivi et le pilotage de la conquête client</li>
+                            <li>Développement d'une classification des titres détenus sur l'épargne financière (PEA, CTO) pour personnaliser les recommandations clients</li>
+                            <li>Création de reportings automatisés pour les métiers afin d'améliorer la prise de décision</li>
+                        </ul>
+
+                        <div class="accordion-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Power BI</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <img src="images/logo-orange.png" alt="Orange" class="accordion-logo">
+                        <div class="accordion-info">
+                            <span class="accordion-date">Sept. 2023 - Sept. 2024</span>
+                            <h4>Data Scientist</h4>
+                            <p class="accordion-company">Orange · Alternance</p>
+                        </div>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <ul class="accordion-list">
+                            <li>Création de modèles de machine learning pour anticiper le désabonnement des clients (churn prediction)</li>
+                            <li>Automatisation des tâches avec la création de tableaux de bord pour le suivi des indicateurs clés</li>
+                            <li>Analyse de l'expérience client à partir des réponses aux sondages grâce à un outil NLP d'analyse textuelle</li>
+                        </ul>
+                        <div class="accordion-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Power BI</span>
+                            <span class="tag">NLP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <img src="images/logo-chu.png" alt="CHU Brest" class="accordion-logo">
+                        <div class="accordion-info">
+                            <span class="accordion-date">Avr. 2023 - Juin 2023</span>
+                            <h4>Stagiaire Data Analyst</h4>
+                            <p class="accordion-company">CHRU de Brest · Stage</p>
+                        </div>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <ul class="accordion-list">
+                            <li>Conception d'un cube OLAP sur le champ d'activité des Soins et Suites de Réadaptation (SSR)</li>
+                            <li>Création de tableaux de bord Power BI pour visualiser les données médicales et optimiser la gestion</li>
+                            <li>Développement de scripts Python et R Shiny pour l'analyse et la visualisation des données</li>
+                        </ul>
+                        <div class="accordion-tags">
+                            <span class="tag">SQL</span>
+                            <span class="tag">Power BI</span>
+                            <span class="tag">Visual Studio</span>
+                            <span class="tag">OLAP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formation -->
+            <h3 class="subsection-title">Formation</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024 - 2026</span>
+                        <h3>Mastère Big Data</h3>
+                        <p class="timeline-place">Sup de Vinci - École d'informatique</p>
+                        <p>Formation en alternance spécialisée en Big Data, Data Engineering et Intelligence Artificielle.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2021 - 2024</span>
+                        <h3>BUT Science des Données (STID)</h3>
+                        <p class="timeline-place">IUT de Vannes - Université Bretagne Sud</p>
+                        <p>Statistique et Informatique Décisionnelle, option IA et Marketing. Formation en analyse de données, machine learning et datavisualisation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Mes Projets</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/bluesky-logo.jpg" alt="Fake News Detection">
+                    </div>
+                    <div class="project-content">
+                        <h3>Détection de Fake News</h3>
+                        <p>Extension Google Chrome pour détecter des fake news sur le résaux social Bluesky en utilisant un modele de langage (LLM) pour analyser le contenu des posts.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">Machine Learning</span>
+                        </div>
+                        <a href="https://github.com/Thomas-Brvn/Social-Network-Fake-News-Detection" class="project-link" target="_blank">Voir le projet →</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/sb29.jpg" alt="Football Dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3>Football Dashboard</h3>
+                        <p>Dashboard interactif et datavisualisation pour analyser les performances des équipes et joueurs.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Power BI</span>
+                            <span class="tag">Data Viz</span>
+                        </div>
+                        <a href="https://github.com/Thomas-Brvn/Football_Dashboard_and_Dataviz" class="project-link" target="_blank">Voir le projet →</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/recommandation_musique.png" alt="Recommandation Musique">
+                    </div>
+                    <div class="project-content">
+                        <h3>Recommandation Musicale</h3>
+                        <p>Système de recommandation de musique basé sur les préférences utilisateur ayant des gouts musicaux similaires.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Spotify API</span>
+                        </div>
+                        <a href="https://github.com/Thomas-Brvn/Recommandation_musique" class="project-link" target="_blank">Voir le projet →</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/wimbledon.jpg" alt="Wimbledon Prediction">
+                    </div>
+                    <div class="project-content">
+                        <h3>Wimbledon Prediction</h3>
+                        <p>Modèle de machine learning pour prédire les résultats des matchs de tennis à Wimbledon basé sur les statistiques des joueurs.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Pandas</span>
+                        </div>
+                        <a href="https://github.com/Thomas-Brvn/wimbledon-prediction" class="project-link" target="_blank">Voir le projet →</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/boursejpg.jpg" alt="Data Warehouse Finance">
+                    </div>
+                    <div class="project-content">
+                        <h3>Data Warehouse Finance & News</h3>
+                        <p>Création d'un entrepôt de données pour centraliser et analyser les données financières et les actualités boursières.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">ETL</span>
+                        </div>
+                        <a href="https://github.com/Thomas-Brvn/Creation_of_Financial_and_News_Data_Warehouse" class="project-link" target="_blank">Voir le projet →</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/llm.webp" alt="Création LLM">
+                    </div>
+                    <div class="project-content">
+                        <h3>Création d'un LLM</h3>
+                        <p>Développement d'un Large Language Model de zéro pour comprendre les mécanismes des architectures Transformer.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">Deep Learning</span>
+                        </div>
+                        <a href="https://github.com/Thomas-Brvn/Creation_LLM" class="project-link" target="_blank" rel="noopener">Voir le projet →</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/computer-vision.jpg" alt="Computer Vision">
+                    </div>
+                    <div class="project-content">
+                        <h3>Computer Vision</h3>
+                        <p>Projet de vision par ordinateur utilisant des réseaux de neurones convolutifs pour la détection et classification d'objets.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">CNN</span>
+                        </div>
+                        <a href="#" class="project-link">Bientôt disponible</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/n8n.png" alt="Agent IA">
+                    </div>
+                    <div class="project-content">
+                        <h3>Création d'un Agent IA</h3>
+                        <p>Développement d'un agent intelligent autonome capable d'effectuer des tâches complexes via des workflows automatisés.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">n8n</span>
+                            <span class="tag">LLM</span>
+                        </div>
+                        <a href="#" class="project-link">Bientôt disponible</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/iot.jpg.webp" alt="IoT Maintenance Prédictive">
+                    </div>
+                    <div class="project-content">
+                        <h3>IoT Maintenance Prédictive</h3>
+                        <p>Modèle de prédiction de pannes sur des données capteurs (NASA Turbofan) pour anticiper la maintenance des équipements industriels.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Time Series</span>
+                            <span class="tag">Deep Learning</span>
+                        </div>
+                        <a href="#" class="project-link">Bientôt disponible</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/rag-amazon.jpg" alt="RAG Support Client">
+                    </div>
+                    <div class="project-content">
+                        <h3>RAG Support Client</h3>
+                        <p>Chatbot intelligent utilisant la technique RAG pour répondre aux questions clients en s'appuyant sur une base de connaissances FAQ.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">LangChain</span>
+                            <span class="tag">Vector DB</span>
+                        </div>
+                        <a href="#" class="project-link">Bientôt disponible</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <p class="contact-intro">
+                Intéressé par mon profil ? N'hésitez pas à me contacter !
+            </p>
+            <div class="contact-links">
+                <a href="https://github.com/Thomas-Brvn" class="contact-item" target="_blank" rel="noopener">
+                    <span class="contact-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                    </span>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/thomas-bourvon-393b36255/" class="contact-item" target="_blank" rel="noopener">
+                    <span class="contact-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </span>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Thomas Bourvon. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
