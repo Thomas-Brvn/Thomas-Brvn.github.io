@@ -130,4 +130,58 @@ if (carouselTrack && prevBtn && nextBtn) {
         carouselTrack.style.transform = `translateX(-${scrollAmount}px)`;
         carouselTrack.style.transition = 'transform 0.5s ease';
     });
+
+    // Swipe tactile pour mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    carouselTrack.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        carouselTrack.style.animation = 'none';
+    }, { passive: true });
+
+    carouselTrack.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 50) {
+            const maxScroll = carouselTrack.scrollWidth - carouselTrack.parentElement.offsetWidth;
+            if (diff > 0) {
+                scrollAmount = Math.min(scrollAmount + slideWidth, maxScroll);
+            } else {
+                scrollAmount = Math.max(scrollAmount - slideWidth, 0);
+            }
+            carouselTrack.style.transform = `translateX(-${scrollAmount}px)`;
+            carouselTrack.style.transition = 'transform 0.5s ease';
+        }
+    }, { passive: true });
+}
+
+// Menu hamburger mobile
+const navBurger = document.getElementById('nav-burger');
+const navLinksList = document.querySelector('.nav-links');
+
+if (navBurger && navLinksList) {
+    navBurger.addEventListener('click', () => {
+        const isOpen = navLinksList.classList.toggle('open');
+        navBurger.classList.toggle('open');
+        navBurger.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Fermer le menu au clic sur un lien
+    navLinksList.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinksList.classList.remove('open');
+            navBurger.classList.remove('open');
+            navBurger.setAttribute('aria-expanded', 'false');
+        });
+    });
+
+    // Fermer le menu au clic en dehors
+    document.addEventListener('click', (e) => {
+        if (!navBurger.contains(e.target) && !navLinksList.contains(e.target)) {
+            navLinksList.classList.remove('open');
+            navBurger.classList.remove('open');
+            navBurger.setAttribute('aria-expanded', 'false');
+        }
+    });
 }

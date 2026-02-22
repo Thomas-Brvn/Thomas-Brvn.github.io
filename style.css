@@ -779,28 +779,122 @@ body {
     font-size: 0.9rem;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== NAV RIGHT (theme toggle + burger) ===== */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ===== HAMBURGER BUTTON ===== */
+.nav-burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    width: 40px;
+    height: 40px;
+}
+
+.nav-burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.nav-burger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.nav-burger.open span:nth-child(2) {
+    opacity: 0;
+}
+.nav-burger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===== RESPONSIVE — TABLETTE (≤ 768px) ===== */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
+    /* Navigation mobile */
+    .nav-burger {
+        display: flex;
     }
 
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--bg-primary);
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        padding: 8px 24px 20px;
+        gap: 0;
+        box-shadow: 0 8px 24px var(--shadow);
+        z-index: 999;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li {
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 14px 0;
+        font-size: 1.05rem;
+    }
+
+    /* Hero */
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
+        letter-spacing: -1px;
     }
 
     .hero-subtitle {
-        font-size: 1.35rem;
+        font-size: 1.3rem;
     }
 
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    /* Titres de section */
     .section-title {
-        font-size: 1.75rem;
+        font-size: 1.7rem;
+        margin-bottom: 2rem;
     }
 
+    /* Projets */
     .projects-grid {
         grid-template-columns: 1fr;
     }
 
+    /* Accordion max-height plus grand sur mobile */
+    .accordion-item.active .accordion-content {
+        max-height: 600px;
+    }
+
+    /* Timeline : désactiver le translateX au hover */
+    .timeline-content:hover {
+        transform: none;
+    }
+
+    /* Contact */
     .contact-links {
         flex-direction: column;
         align-items: center;
@@ -808,8 +902,69 @@ body {
 
     .contact-item {
         width: 100%;
-        max-width: 280px;
+        max-width: 320px;
         justify-content: center;
+    }
+
+    /* Carousel : overlay toujours visible (pas de hover sur tactile) */
+    .carousel-slide .carousel-overlay {
+        opacity: 0;
+    }
+    .carousel-slide:active .carousel-overlay {
+        opacity: 1;
+    }
+    .carousel-slide:active .carousel-caption {
+        opacity: 0;
+    }
+}
+
+/* ===== RESPONSIVE — MOBILE (≤ 480px) ===== */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    /* Hero encore plus compact */
+    .hero-title {
+        font-size: 1.9rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    /* Boutons CTA en colonne */
+    .hero-cta {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Sections moins espacées */
+    .experience,
+    .projects,
+    .contact {
+        padding: 64px 0;
+    }
+
+    /* Timeline : marge réduite */
+    .timeline {
+        padding-left: 28px;
+    }
+
+    .timeline-marker {
+        left: -28px;
+        width: 14px;
+        height: 14px;
+    }
+
+    /* Carousel slides plus petits */
+    .carousel-slide {
+        width: 240px;
+        height: 160px;
     }
 }
 
