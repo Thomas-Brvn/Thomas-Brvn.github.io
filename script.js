@@ -1,20 +1,3 @@
-// Theme Toggle
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
-
-// Check for saved theme preference or default to light
-const savedTheme = localStorage.getItem('theme') || 'light';
-if (savedTheme === 'dark') {
-    body.setAttribute('data-theme', 'dark');
-}
-
-themeToggle.addEventListener('click', () => {
-    const currentTheme = body.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-    body.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-});
 
 // Navbar background on scroll
 const navbar = document.querySelector('.navbar');

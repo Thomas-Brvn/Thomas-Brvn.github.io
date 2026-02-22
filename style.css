@@ -18,24 +18,6 @@
     --timeline-marker: #2563eb;
 }
 
-[data-theme="dark"] {
-    /* Dark Theme */
-    --bg-primary: #0f0f1a;
-    --bg-secondary: #1a1a2e;
-    --bg-card: #16162a;
-    --text-primary: #f1f1f4;
-    --text-secondary: #a8a8b8;
-    --text-muted: #6c6c7e;
-    --accent: #60a5fa;
-    --accent-hover: #93c5fd;
-    --border: #2a2a4a;
-    --shadow: rgba(0, 0, 0, 0.3);
-    --shadow-hover: rgba(0, 0, 0, 0.5);
-    --tag-bg: #1e3a5f;
-    --tag-text: #93c5fd;
-    --timeline-line: #2a2a4a;
-    --timeline-marker: #60a5fa;
-}
 
 /* ===== RESET & BASE ===== */
 *, *::before, *::after {
@@ -131,38 +113,7 @@ body {
     color: var(--accent);
 }
 
-.theme-toggle {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease;
-}
 
-.theme-toggle:hover {
-    background: var(--border);
-}
-
-.icon-sun, .icon-moon {
-    font-size: 1.2rem;
-}
-
-.icon-moon {
-    display: none;
-}
-
-[data-theme="dark"] .icon-sun {
-    display: none;
-}
-
-[data-theme="dark"] .icon-moon {
-    display: inline;
-}
 
 /* ===== HERO SECTION ===== */
 .hero {
@@ -779,12 +730,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* ===== NAV RIGHT (theme toggle + burger) ===== */
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
 
 /* ===== HAMBURGER BUTTON ===== */
 .nav-burger {
