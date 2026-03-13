@@ -90,54 +90,6 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Carousel navigation
-const carouselTrack = document.querySelector('.carousel-track');
-const prevBtn = document.querySelector('.carousel-prev');
-const nextBtn = document.querySelector('.carousel-next');
-
-if (carouselTrack && prevBtn && nextBtn) {
-    let scrollAmount = 0;
-    const slideWidth = 324; // 300px + 24px gap
-
-    prevBtn.addEventListener('click', () => {
-        carouselTrack.style.animation = 'none';
-        scrollAmount = Math.max(scrollAmount - slideWidth, 0);
-        carouselTrack.style.transform = `translateX(-${scrollAmount}px)`;
-        carouselTrack.style.transition = 'transform 0.5s ease';
-    });
-
-    nextBtn.addEventListener('click', () => {
-        carouselTrack.style.animation = 'none';
-        const maxScroll = carouselTrack.scrollWidth - carouselTrack.parentElement.offsetWidth;
-        scrollAmount = Math.min(scrollAmount + slideWidth, maxScroll);
-        carouselTrack.style.transform = `translateX(-${scrollAmount}px)`;
-        carouselTrack.style.transition = 'transform 0.5s ease';
-    });
-
-    // Swipe tactile pour mobile
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    carouselTrack.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-        carouselTrack.style.animation = 'none';
-    }, { passive: true });
-
-    carouselTrack.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        const diff = touchStartX - touchEndX;
-        if (Math.abs(diff) > 50) {
-            const maxScroll = carouselTrack.scrollWidth - carouselTrack.parentElement.offsetWidth;
-            if (diff > 0) {
-                scrollAmount = Math.min(scrollAmount + slideWidth, maxScroll);
-            } else {
-                scrollAmount = Math.max(scrollAmount - slideWidth, 0);
-            }
-            carouselTrack.style.transform = `translateX(-${scrollAmount}px)`;
-            carouselTrack.style.transition = 'transform 0.5s ease';
-        }
-    }, { passive: true });
-}
 
 // Menu hamburger mobile
 const navBurger = document.getElementById('nav-burger');
